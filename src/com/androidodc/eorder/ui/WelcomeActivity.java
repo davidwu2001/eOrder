@@ -1,4 +1,4 @@
-package com.androidodc;
+package com.androidodc.eorder.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 public class WelcomeActivity extends Activity {
 
-    private TextView welcomeView = null;
-    private Button enterButton = null;
+    private TextView mWelcomeView = null;
+    private Button mEnterButton = null;
 
     /** Called when the activity is first created. */
     @Override
@@ -18,23 +18,20 @@ public class WelcomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome);
 
-        welcomeView = (TextView) findViewById(R.id.welcome);
+        mWelcomeView = (TextView) findViewById(R.id.welcome);
 
-        String welcome = getResources().getString(R.string.welcome,
-                getHotelName());
-        welcomeView.setText(welcome);
+        String welcome = getString(R.string.welcome, getHotelName());
+        mWelcomeView.setText(welcome);
 
-        enterButton = (Button) findViewById(R.id.enter);
-        enterButton.setOnClickListener(new View.OnClickListener() {
+        mEnterButton = (Button) findViewById(R.id.enter_button);
+        mEnterButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
                 /*
-                 * The following code will be used, when TableAcitivity is
-                 * created.
-                 *
-                 * startActivity(new Intent(WelcomeActivity.this,
-                 * TablesActivity.class));
+                 * The following code will be used, when TableAcitivity is created.
+                 * 
+                 * startActivity(new Intent(WelcomeActivity.this, TablesActivity.class));
                  */
                 finish();
             }

@@ -2,5 +2,5 @@
 <resources>
     <string name="app_name">eOrder</string>
     <string name="welcome">欢迎光临%s</string>
-    <string name="enter">进入</string>
+    <string name="enter_button">进入</string>
 </resources>
